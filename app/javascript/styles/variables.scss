@@ -1,3 +1,81 @@
+@function tint(
+    $color,
+    $percent
+) {
+    @if not _is-color($color) {
+        @error "`#{$color}` is not a valid color for the `$color` argument in " +
+        "the `tint` mixin.";
+    } @else {
+        @return mix(#fff, $color, $percent);
+    }
+}
+
+@function shade(
+    $color,
+    $percent
+) {
+    @if not _is-color($color) {
+        @error "`#{$color}` is not a valid color for the `$color` argument in " +
+        "the `tint` mixin.";
+    } @else {
+        @return mix(#000, $color, $percent);
+    }
+}
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+
+$blue: rgb(14, 144, 210);
+$purple: rgb(128, 88, 165);
+$red: rgb(221, 81, 76);
+$yellow: rgb(250, 210, 50);
+$green: rgb(94, 185, 94);
+
+$dark-blue: shade($blue, 7%);
+$dark-purple: shade($purple, 7%);
+$dark-red: shade($red, 7%);
+$dark-yellow: shade($yellow, 7%);
+$dark-green: shade($green, 7%);
+
+$light-blue: tint($blue, 90%);
+$light-purple: tint($purple, 90%);
+$light-red: tint($red, 90%);
+$light-yellow: tint($yellow, 90%);
+$light-green: tint($green, 90%);
+
+/*$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;*/
+
+$dark-gray: $base03;
+$medium-gray: $base01;
+$light-gray: $base0;
+
+$color1: darken($dark-green, 10%) !default; // darkest
+$color2: lighten($green, 40%) !default; // lightest
+$color3: lighten($green, 20%) !default; // lighter
+$color4: $green !default; // vibrant
+$color5: #ffffff !default; // white
+$color6: $red !default; // error red
+$color7: #79bd9a !default; // succ green
+$color8: #000000 !default; // black
+
+/* $color1: #282c37 !default; // darkest */
+/* $color2: #d9e1e8 !default; // lightest */
+/* $color3: #9baec8 !default; // lighter */
+/* $color4: #2b90d9 !default; // vibrant */
+/* $color5: #ffffff !default; // white */
+/* $color6: #df405a !default; // error red */
+/* $color7: #79bd9a !default; // succ green */
+/* $color8: #000000 !default; // black */
+
+
 // Commonly used web colors
 $black: #000000;            // Black
 $white: #ffffff;            // White
