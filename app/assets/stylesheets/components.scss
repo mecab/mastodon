@@ -391,10 +391,10 @@ a.status__content__spoiler-link {
 
       a.status__content__spoiler-link {
         color: $color4;
-        background: $color3;
+        background: darken($color1, 10%);
 
         &:hover {
-          background: lighten($color3, 8%);
+          background: darken($color1, 5%);
         }
       }
     }
@@ -418,7 +418,7 @@ a.status__content__spoiler-link {
   position: relative;
 
   .status__display-name strong {
-    color: lighten($color1, 26%);
+    color: lighten($color2, 26%);
   }
 }
 
@@ -613,11 +613,11 @@ a.status__content__spoiler-link {
 
 .muted {
   .status__content p, .status__content a {
-    color: $color2;
+    color: lighten($color2, 26%);
   }
 
   .status__display-name strong {
-    color: $color2;
+    color: lighten($color2, 26%);
   }
 
   .status__avatar {
