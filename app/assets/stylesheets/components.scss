@@ -383,7 +383,7 @@ a.status__content__spoiler-link {
     }
 
     .status__content {
-      color: $color3;
+      color: $color2;
 
       a {
         color: $color4;
@@ -411,7 +411,7 @@ a.status__content__spoiler-link {
 
 .status__prepend {
   margin-left: 68px;
-  color: lighten($color1, 26%);
+  color: $color3;
   padding: 8px 0;
   padding-bottom: 2px;
   font-size: 14px;
@@ -438,7 +438,7 @@ a.status__content__spoiler-link {
 
 .detailed-status__meta {
   margin-top: 15px;
-  color: lighten($color1, 26%);
+  color: $color5;
   font-size: 14px;
   line-height: 18px;
 }
@@ -613,11 +613,11 @@ a.status__content__spoiler-link {
 
 .muted {
   .status__content p, .status__content a {
-    color: lighten($color1, 26%);
+    color: $color2;
   }
 
   .status__display-name strong {
-    color: lighten($color1, 26%);
+    color: $color2;
   }
 
   .status__avatar {
@@ -626,7 +626,7 @@ a.status__content__spoiler-link {
 
   a.status__content__spoiler-link {
     background: lighten($color1, 26%);
-    color: lighten($color1, 4%);
+    color: lighten($color2, 4%);
 
     &:hover {
       background: lighten($color1, 29%);
