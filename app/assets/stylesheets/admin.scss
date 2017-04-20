@@ -60,7 +60,7 @@
           border: 0;
 
           &.selected {
-            color: $color5;
+            color: white;
             background-color: $color4;
             border-bottom: 0;
             border-radius: 0;
@@ -86,7 +86,7 @@
     padding-left: 25px;
 
     h2 {
-      color: $color2;
+      color: $color4;
       font-size: 24px;
       line-height: 28px;
       font-weight: 400;

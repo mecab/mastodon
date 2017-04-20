@@ -1,8 +1,60 @@
-$color1: #282c37 !default; // darkest
-$color2: #d9e1e8 !default; // lightest
-$color3: #9baec8 !default; // lighter
-$color4: #2b90d9 !default; // vibrant
-$color5: #ffffff !default; // white
-$color6: #df405a !default; // error red
-$color7: #79bd9a !default; // succ green
+@function tint(
+    $color,
+    $percent
+) {
+    @if not _is-color($color) {
+        @error "`#{$color}` is not a valid color for the `$color` argument in " +
+        "the `tint` mixin.";
+    } @else {
+        @return mix(#fff, $color, $percent);
+    }
+}
+
+@function shade(
+    $color,
+    $percent
+) {
+    @if not _is-color($color) {
+        @error "`#{$color}` is not a valid color for the `$color` argument in " +
+        "the `tint` mixin.";
+    } @else {
+        @return mix(#000, $color, $percent);
+    }
+}
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+
+$dark-gray: $base03;
+$medium-gray: $base01;
+$light-gray: $base0;
+
+$green: rgb(94, 185, 94);
+$dark-green: shade($green, 10%);
+$light-green: tint($green, 90%);
+
+$red: rgb(221, 81, 76);
+
+$color1: $light-green !default; // darkest
+$color2: $medium-gray !default; // lightest
+$color3: $light-gray !default; // lighter
+$color4: $green !default; // vibrant
+$color5: $light-gray !default; // white
+$color6: $red !default; // error red
+$color7: $green !default; // succ green
 $color8: #000000 !default; // black
+
+/* $color1: #282c37 !default; // darkest */
+/* $color2: #d9e1e8 !default; // lightest */
+/* $color3: #9baec8 !default; // lighter */
+/* $color4: #2b90d9 !default; // vibrant */
+/* $color5: #ffffff !default; // white */
+/* $color6: #df405a !default; // error red */
+/* $color7: #79bd9a !default; // succ green */
+/* $color8: #000000 !default; // black */

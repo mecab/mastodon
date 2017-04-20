@@ -65,7 +65,7 @@ code {
     label {
       font-family: inherit;
       font-size: 14px;
-      color: white;
+      color: $color5;
       display: block;
       width: auto;
     }
@@ -148,7 +148,7 @@ code {
     border: 0;
     border-radius: 4px;
     background: $color4;
-    color: $color5;
+    color: white;
     font-size: 18px;
     padding: 10px;
     text-transform: uppercase;
