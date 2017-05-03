@@ -65,6 +65,8 @@ gem 'react-rails'
 gem 'browserify-rails'
 gem 'autoprefixer-rails'
 
+gem 'paperclip-ipfs-storage'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
