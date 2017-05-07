@@ -5,15 +5,15 @@ services:
     restart: always
     image: postgres:alpine
 ### Uncomment to enable DB persistance
-#    volumes:
-#      - ./postgres:/var/lib/postgresql/data
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
 
   redis:
     restart: always
     image: redis:alpine
 ### Uncomment to enable REDIS persistance
-#    volumes:
-#      - ./redis:/data
+    volumes:
+      - ./redis:/data
 
   web:
     restart: always
@@ -26,6 +26,7 @@ services:
     depends_on:
       - db
       - redis
+      - ipfs
     volumes:
       - ./public/assets:/mastodon/public/assets
       - ./public/system:/mastodon/public/system
@@ -53,3 +54,11 @@ services:
       - redis
     volumes:
       - ./public/system:/mastodon/public/system
+
+# Uncomment the following to use IPFS
+#  ipfs:
+#    restart: always
+#    image: jbenet/go-ipfs
+#    env_file: .env.production
+#    volumes:
+#      - ./ipfs:/data/ipfs

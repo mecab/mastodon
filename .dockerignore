@@ -9,3 +9,7 @@ vendor/bundle
 .DS_Store
 *.swp
 *~
+redis
+postgres
+ipfs
+
